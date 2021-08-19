@@ -1,0 +1,5 @@
+.venv
+git init
+
+__pycache__
+

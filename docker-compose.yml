@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  speech_recognition:
+    volumes:
+      - ./:/app
+    # env_file:
+    #   - .venv
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        PIPENV_ARGS: --dev
+
+    ports:
+      - ${PORT:-5000}:5000

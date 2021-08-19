@@ -9,7 +9,7 @@ build:
 	docker build -t s-o-question:latest .
 
 run:
-	docker run -p 8080:8080 s-o-question
+	docker run -p 5001:5001 s-o-question
 
 deploy:
 	export FLASK_APP=main.py

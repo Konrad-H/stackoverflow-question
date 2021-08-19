@@ -1,4 +1,5 @@
-FROM python:3.8.8-slim-buster
+# FROM python:3.8.8-slim-buster
+FROM python:3.8
 
 # Working Directory
 WORKDIR /app
@@ -11,7 +12,7 @@ COPY . ./app /app/
 RUN pip install --no-cache-dir --upgrade pip &&\
     pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
 
-# EXPOSE 8000
+EXPOSE 5000
 
 ENTRYPOINT [ "python" ]
 

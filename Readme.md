@@ -1,10 +1,30 @@
-# Simple audio recorder demo
+# "Problem loading Page" Flask App using docker
 
-This simple little project records audio in the the browser and sends the resulting WAV file to the server written in Python
-(using the Flask library) where it can be fruther processed and its results displayed on screen.
+Repository for Stack Overflow Question
 
-This demo simply runs the ffprobe program (from the ffmpeg package) on the file that was previously written to temp.
+Hi,
 
-This demo uses the audio recorder library from https://webaudiodemos.appspot.com/AudioRecorder/ (MIT license). The reason
-for using that particular library is the ability to view audio in realtime before and during recording as well as the ability
-to save the audio as a simple WAV file instead of OPUS, which is the only option for the built-in MediaRecorder component.  
+I am trying to run a flask app using a docker. 
+Operating system Windows 11, WSL image Ubuntu-20.04.
+A simple reproducible example:
+https://github.com/Konrad-H/stackoverflow-question
+
+If I run (inside a venv) 
+
+    $ python app/main.py
+
+the following message appears in the console:
+
+    Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+And I can successfully connect to the app.
+
+On the other hand, if I try to run the repo using:
+
+    $ docker build -t s-o-question:latest .
+    $ docker run -p 5000:5000 s-o-question
+
+I get the exact same message on the console, but the webpage takes a long time loading and after a while a [connection timeout][1] appears.
+
+
+  [1]: https://i.stack.imgur.com/qkFlD.png

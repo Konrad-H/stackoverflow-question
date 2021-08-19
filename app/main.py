@@ -1,6 +1,4 @@
 import logging
-import wave
-import json
 
 from flask import Flask, render_template, request
 
